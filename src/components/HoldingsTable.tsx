@@ -3,7 +3,6 @@ import { TrendingUp, TrendingDown, ExternalLink, Loader2 } from 'lucide-react';
 import { getProfile } from "@zoralabs/coins-sdk";
 import { useAccount } from 'wagmi';
 
-// Updated interfaces to match the actual API response
 interface CoinData {
   id: string;
   name?: string;

@@ -5,7 +5,6 @@ import { config } from './config/wagmi';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
 import { CreatorDashboard } from './pages/CreatorDashboard';
-import { ArticleDetail } from './pages/ArticleDetail';
 import { Portfolio } from './pages/Portfolio';
 
 const queryClient = new QueryClient();
@@ -19,7 +18,6 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/dashboard" element={<CreatorDashboard />} />
-              <Route path="/article/:id" element={<ArticleDetail />} />
               <Route path="/portfolio" element={<Portfolio />} />
             </Routes>
           </Layout>

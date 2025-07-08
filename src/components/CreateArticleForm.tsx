@@ -38,11 +38,10 @@ const generateArticleHTML = (data: {
   image?: string;
   mintPrice?: string;
 }) => {
-  // Convert content to paragraphs for compactness
   const paragraphs = data.content
     .split(/\n+/)
     .filter(Boolean)
-    .map(p => `<p>${p.trim()}</p>`) // wrap each non-empty line in <p>
+    .map(p => `<p>${p.trim()}</p>`)
     .join('\n');
 
   return `

@@ -36,7 +36,6 @@ export const CreatorDashboard: React.FC = () => {
           <StatsCard key={index} stat={stat} />
         ))}
       </div>
-
       <CreateArticleForm />
     </div>
   );
