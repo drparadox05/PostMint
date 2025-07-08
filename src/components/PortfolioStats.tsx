@@ -2,13 +2,12 @@ import React from 'react';
 import { TrendingUp, Coins, Award, DollarSign } from 'lucide-react';
 
 
-
 export const PortfolioStats: React.FC<{
   className?: string;
   totalEarningsUsd: number;
   articlesMintedCount: number;
   totalHoldingsCount: number;
-  bestPerformer: string | null;
+  bestPerformer: string;
 }> = ({ className, totalEarningsUsd, articlesMintedCount, totalHoldingsCount, bestPerformer }) => {
   const stats = [
     {
@@ -31,7 +30,7 @@ export const PortfolioStats: React.FC<{
     },
     {
       label: 'Best Performer',
-      value: `${bestPerformer}`,
+      value: bestPerformer ?? 'NA',
       icon: TrendingUp,
       color: 'from-orange-500 to-red-500',
     },
@@ -45,7 +44,6 @@ export const PortfolioStats: React.FC<{
             <div className="space-y-1">
               <p className="text-sm text-gray-600">{stat.label}</p>
               <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-              <p className="text-sm text-green-600 font-medium">{stat.change}</p>
             </div>
             <div className={`p-3 rounded-lg bg-gradient-to-r ${stat.color}`}>
               <stat.icon className="h-6 w-6 text-white" />

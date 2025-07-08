@@ -65,7 +65,7 @@ export const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <section className="text-center space-y-6">
         <div className="space-y-4">
           <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 bg-clip-text text-transparent">
